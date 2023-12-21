@@ -27,4 +27,20 @@
 - https://habr.com/ru/articles/259055/
 
 Список выполненных задач:
-...
+
+Мой datasource порт 5444:5432 для DB
+Мой datasource порт 5433:5432 для TEST
+
+
+2. Удалил соцсети: VK, Yandex
+    Удалил bean-классы VkOAuth2UserDataHandler, YandexOAuth2UserDataHandler
+    Закомментировал 66-77 строки в application.yaml
+    Закомментировал 51-58 строки в login.html
+3. Вынес чувствительную информацию в application-sensitive.yaml
+    Добавил в application.yaml: 
+     config:
+         import: classpath:application-sensitive.yaml
+    Закомментировал все чувствительные поля в application.yaml
+    Переменные окружения добавлял через CMD и после перезагрузки ПК приложение запустилось правильно.
+6. Сделал рефакторинг метода com.javarush.jira.bugtracking.attachment.FileUtil#upload
+5. Написал тесты для методов контроллера ProfileRestController
